@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Smile secret</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+    </head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-white text-uppercase fixed-top" id="mainNav">
+        <div class="container-fluid">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="./assets/img/logo.jpg" width="200"/></a>
+            <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-primary" href="./index.html">Que es Smile Secret</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-primary" href="./index.html">Como funciona</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-primary" href="./index.html">F.A.Q</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-primary" href="./dondeatenderse.html">Donde atenderme</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-primary" href="./precios.html">Precios y Financiación</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-primary" href="./index.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+  </nav>
+
+  <div class="whatsapp-button">
+    <a href="https://api.whatsapp.com/send?phone=TUNUMERODETELEFONO" target="_blank">
+      <i class="fab fa-fw fa-whatsapp"></i>
+    </a>
+  </div>
+
+ <!-- CONTENIDO -->
+  <div class="container">
+    <div class="page-section-places">
+      <h2 class="page-section-heading text-center text-primary mb-0">Donde atenderme</h2>
+      <form id="myForm" class="page-section-form">
+          <div class="row">
+            <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="select1" class="lead">Provincia:</label>
+                    <select name="selectLevel" id="selectLevel"  class="form-control">
+                      <option value="">-- Seleccionar provincia --</option>
+                      <option value="CABA">Ciudad de Buenos Aires</option>
+                      <option value="GBAZNORTE">GBA Zona Norte</option>
+                      <option value="BUENOSAIRES">Buenos Aires</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="col-md-12">
+                  <div class="form-group">
+                      <label for="select2" class="lead">Localidad:</label>
+                      <select name="selectSubject" id="selectSubject"  class="form-control">
+                          <option value=""> -- Seleccionar localidad -- </option>
+                          <option value="CABA">Belgrano - Colegiales</option>
+                          <option data-value="CABA" value="Centro">Centro</option>
+                          <option data-value="CABA" value="Flores">Flores</option>
+
+
+
+                          <option value="BUENOSAIRES" data-value="BUENOSAIRES">La Plata</option>
+                          <option value="Pilar" data-value="GBAZNORTE">Pilar</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="col-md-12">
+                <div style="display: flex; justify-content: center;margin-top: 20px;">
+                  <button id="buscarButton" class="buscar" type="button">BUSCAR</button>
+                </div>
+              </div>
+            </div>
+        </form>
+        <div id="resultados" class="mt-3 container"></div>
+        <div id="map-container"></div>
+      </div>
+  </div>
+
+
+
+
+    <!-- Footer-->
+    <footer class="footer text-center" style="margin-top: 25rem;">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Location
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Location</h4>
+                    <p class="lead mb-0">
+                        2215 John Daniel Drive
+                        <br />
+                        Clark, MO 65243
+                    </p>
+                </div>-->
+                <!-- Footer Social Icons-->
+                <div class="col-lg-12 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Seguinos en:</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/Smilesecret.ok/"><i class="fab fa-fw fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/company/smilesecret/"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/smilesecret.ok/"><i class="fab fa-fw fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://api.whatsapp.com/send?phone=549112775553"><i class="fab fa-fw fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white">
+        <div class="container"><small>Copyright © SmileSecret 2020</small></div>
+    </div>
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+    <div class="scroll-to-top d-lg-none position-fixed">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+    </div>
+
+
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+
+        
+   <script type="text/javascript">
+     $(document).ready(function() {
+      var selectors = ['selectLevel', 'selectSubject']
+
+      $('select').on('change', function() {
+        var index = selectors.indexOf(this.id)
+        var value = this.value
+
+        // check if is the last one or not
+        if (index < selectors.length - 1) {
+          var next = $('#' + selectors[index + 1])
+
+          // Show all the options in the next select
+          $(next).find('option').show()
+          if (value != "") {
+            // if this select's value is not empty
+            // hide some of the options 
+            $(next).find('option[data-value!=' + value + ']').hide()
+          }
+
+          // set next select's value to be the first option's value 
+          // and trigger change()
+          $(next).val($(next).find("option:first").val()).change()
+        }
+      });
+
+      $('#buscarButton').on('click', function() {
+        var nivelSeleccionado = $('#selectLevel').val();
+        var materiaSeleccionada = $('#selectSubject').val();
+
+        var resultadoFiltrado = filtrarResultados(nivelSeleccionado, materiaSeleccionada);
+
+        mostrarResultados(resultadoFiltrado, materiaSeleccionada);
+      });
+
+      function filtrarResultados(nivel, materia) {
+        return `<p class="lead" style="margin-top: 50px; margin-bottom: 40px">Resultados para ${materia}:</p>`
+      }
+
+
+   function mostrarResultados(resultado, materiaSeleccionada) {
+    document.getElementById('resultados').innerHTML = resultado;
+
+    if(materiaSeleccionada == "Centro") {
+      const tableHTML = `
+        <div class="row">
+          <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
+            <p class="profesional">Clínica dental Smiling Suipacha<p>
+          </div>
+          <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6"">
+            <div class="fix-mobile">
+              <p class="detalle-profesional">Suipacha 576 1er piso oficina 1</p>
+              <p class="detalle-profesional"><a href="mailto:contacto@cemsargentina.com">contacto@cemsargentina.com</a></p>
+              <p class="detalle-profesional">Tel: 11 2455-3135</p>
+
+              <button class="ver-mapa-btn buscar-mapa" data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.1036729942366!2d-58.38252072363111!3d-34.60153985738417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac92e8d55f7%3A0x8106f439ba057dc5!2sSuipacha%20576%2C%20C1008%20CABA!5e0!3m2!1ses-419!2sar!4v1696550357719!5m2!1ses-419!2sar" >Ver en mapa</button>
+            </div>
+            <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="mapModalLabel">Clínica dental Smiling Suipacha</h5>
+                      <button type="button" id="cerrarModalBtn" class="btn btn-secondary">X</button>
+
+                  </div>
+                  <div class="modal-body">
+                    <!-- Aquí se mostrará el mapa de Google Maps -->
+                    <iframe
+                      width="100%"
+                      height="400"
+                      frameborder="0"
+                      style="border:0"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.1036729942366!2d-58.38252072363111!3d-34.60153985738417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac92e8d55f7%3A0x8106f439ba057dc5!2sSuipacha%20576%2C%20C1008%20CABA!5e0!3m2!1ses-419!2sar!4v1696550357719!5m2!1ses-419!2sar"
+                      allowfullscreen
+                      aria-hidden="false"
+                      tabindex="0"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr style="color: #4a4297"/>
+    `;
+        document.getElementById('resultados').innerHTML = resultado + tableHTML;
+
+
+        // MODAL
+        const mapModal = new bootstrap.Modal(document.getElementById('mapModal'));
+
+        $('.ver-mapa-btn').on('click', function () {
+          const mapUrl = $(this).data('map-url');
+          const iframeElement = document.querySelector('#mapModal iframe');
+
+          iframeElement.src = mapUrl;
+
+          mapModal.show();
+        });
+
+        const cerrarModalBtn = document.getElementById('cerrarModalBtn');
+
+        cerrarModalBtn.addEventListener('click', function () {
+          console.log("aha");
+
+          mapModal.hide();
+        });
+
+
+
+    } else if(materiaSeleccionada == "Flores") {
+      const tableHTML = `
+        <div class="row">
+          <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
+            <p class="profesional">Clínica dental Hello Brackets<p>
+          </div>
+          <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
+            <div class="fix-mobile">
+              <p class="detalle-profesional">Av Carabobo 43</p>
+              <p class="detalle-profesional"><a href="mailto:hellobrackets@gmail.com">hellobrackets@gmail.com</a></p>
+              <p class="detalle-profesional">Tel: 1132950693</p>
+
+              <button class="ver-mapa-btn buscar-mapa" data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.0798703339656!2d-58.459285823629976!3d-34.62742185875155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca25c4a80eaf%3A0x494b623c786c8d59!2sAv.%20Carabobo%2043%2C%20C1406DGA%20CABA!5e0!3m2!1ses-419!2sar!4v1696550706640!5m2!1ses-419!2sar">Ver en mapa</button>
+            </div>
+            <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="mapModalLabel">Clínica dental Hello Brackets</h5>
+                      <button type="button" id="cerrarModalBtn" class="btn btn-secondary">X</button>
+
+                  </div>
+                  <div class="modal-body">
+                    <iframe
+                      width="100%"
+                      height="400"
+                      frameborder="0"
+                      style="border:0"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.0798703339656!2d-58.459285823629976!3d-34.62742185875155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca25c4a80eaf%3A0x494b623c786c8d59!2sAv.%20Carabobo%2043%2C%20C1406DGA%20CABA!5e0!3m2!1ses-419!2sar!4v1696550706640!5m2!1ses-419!2sar"
+                      allowfullscreen
+                      aria-hidden="false"
+                      tabindex="0"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    `;
+        document.getElementById('resultados').innerHTML = resultado + tableHTML;
+
+
+        // MODAL
+        const mapModal = new bootstrap.Modal(document.getElementById('mapModal'));
+
+        $('.ver-mapa-btn').on('click', function () {
+          const mapUrl = $(this).data('map-url');
+          const iframeElement = document.querySelector('#mapModal iframe');
+
+          iframeElement.src = mapUrl;
+
+          mapModal.show();
+        });
+
+        const cerrarModalBtn = document.getElementById('cerrarModalBtn');
+
+        cerrarModalBtn.addEventListener('click', function () {
+          console.log("aha");
+
+          mapModal.hide();
+        });
+
+    } else if(materiaSeleccionada == "Pilar") {
+       const tableHTML = `
+        <div class="row">
+          <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
+            <p class="profesional">Clínica dental Smiling Pilar<p>
+          </div>
+          <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
+            <div class=" fix-mobile">
+              <p class="detalle-profesional">Edificio office park norte. Las Camelias 3324, oficina 207</p>
+              <p class="detalle-profesional"><a href="mailto:info@smilingpilar.com.ar">info@smilingpilar.com.ar</a></p>
+              <p class="detalle-profesional">Tel: 1125553008</p>
+
+              <button class="ver-mapa-btn buscar-mapa" data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3290.566789384261!2d-58.794360623637736!3d-34.4377575487536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9edc57df1eb1%3A0x7575570519b79628!2sLas%20Camelias%203324%2C%20Del%20Viso%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1696550896223!5m2!1ses-419!2sar">Ver en mapa</button>
+            </div>
+            
+            <div class="modal fade" id="mapModal" tabindex="-1" aria-labelledby="mapModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="mapModalLabel">Clínica dental Smiling Pilar</h5>
+                      <button type="button" id="cerrarModalBtn" class="btn btn-secondary">X</button>
+
+                  </div>
+                  <div class="modal-body">
+                    <!-- Aquí se mostrará el mapa de Google Maps -->
+                    <iframe
+                      width="100%"
+                      height="400"
+                      frameborder="0"
+                      style="border:0"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3290.566789384261!2d-58.794360623637736!3d-34.4377575487536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9edc57df1eb1%3A0x7575570519b79628!2sLas%20Camelias%203324%2C%20Del%20Viso%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1696550896223!5m2!1ses-419!2sar"
+                      allowfullscreen
+                      aria-hidden="false"
+                      tabindex="0"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    `;
+        document.getElementById('resultados').innerHTML = resultado + tableHTML;
+
+
+        // MODAL
+        const mapModal = new bootstrap.Modal(document.getElementById('mapModal'));
+
+        $('.ver-mapa-btn').on('click', function () {
+          const mapUrl = $(this).data('map-url');
+          const iframeElement = document.querySelector('#mapModal iframe');
+
+          iframeElement.src = mapUrl;
+
+          mapModal.show();
+        });
+
+        const cerrarModalBtn = document.getElementById('cerrarModalBtn');
+
+        cerrarModalBtn.addEventListener('click', function () {
+          console.log("aha");
+
+          mapModal.hide();
+        });
+    } else if(materiaSeleccionada == "BUENOSAIRES") {
+      const tableHTML = `
+      <table>
+        <thead>
+          <tr>
+            <th>La Plata</th>
+            <th>Columna 2</th>
+            <!-- Agrega más columnas según tus necesidades -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dato 1</td>
+            <td>Dato 2</td>
+            <!-- Agrega más filas y datos según tus necesidades -->
+          </tr>
+        </tbody>
+      </table>
+    `;
+
+    
+    document.getElementById('resultados').innerHTML = resultado + tableHTML;
+    }
+    
+  }
+
+
+
+});
+
+
+        </script>
+</body>
+
+</html>
